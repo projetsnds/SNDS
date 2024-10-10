@@ -1,0 +1,27 @@
+{
+    "lac": {
+        "yt-cb": true,
+        "reddit-cb": false,
+        "ig-cb": false,
+        "fkr-cb": false,
+        "yt-search": "lac",
+        "yt-country": "France",
+        "yt-start-date": "2020-01-01",
+        "yt-end-date": "2024-05-19",
+        "yt-nb": 25,
+        "reddit-community": "",
+        "reddit-country": "",
+        "reddit-start-date": "",
+        "reddit-end-date": "",
+        "reddit-nb": null,
+        "ig-search": "",
+        "ig-country": "",
+        "ig-end-date": "",
+        "ig-nb": null,
+        "fkr-search": "",
+        "fkr-country": "",
+        "fkr-start-date": "",
+        "fkr-end-date": "",
+        "fkr-nb": null
+    }
+}

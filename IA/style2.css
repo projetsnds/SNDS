@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+body {
+  background-color: #212428;
+  color: white;
+  font: 1.2rem "Fira Sans", sans-serif;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.center-box {
+  left: 20%;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.tabs {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.tabs li {
+    background-color: #212327;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c4cfde;
+    font-family: 'Poppins', sans-serif;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    cursor: pointer;
+}
+
+.tabs li:hover {
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    color: #46539b;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.active {
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    color: #46539b !important;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.contents {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.box {
+    gap: 20px;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    animation: moving 1s ease;
+    -webkit-animation: moving 1s ease;
+}
+
+.box img {
+    width: 50%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.box h3 {
+    color: #c4cfde;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.box p {
+    color: #c4cfde;
+    opacity: .5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+
+.add span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #c4cfde;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+
+select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: none;
+    color: inherit;
+    box-shadow: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  /* Custom Select wrapper */
+  .select {
+    margin-bottom: 1em;
+    position: relative;
+    display: flex;
+    width: min(20rem, 90vw);
+    background: var(--background-select);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  /* Select style */
+  .select select {
+    flex: 1;
+    padding: 1em;
+    cursor: pointer;
+  }
+  /* Arrow style */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.25s all ease;
+    pointer-events: none; /* IMPORTANT to click on arrow */
+  }
+  /* Arrow hover */
+  .select:hover::after {
+    color: #f39c12;
+    animation: bounce 0.5s infinite;
+  }
+  
+  .training {
+	position: relative;
+	transition-duration: 0.3s;
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+	border-radius: 0.75rem;
+	border: 1px solid #1d1f24;
+	background-color: rgba(29, 29, 29, 0.7);
+	color: #c1c0b4;
+	font-family: Graphik, sans-serif;
+	text-shadow: 0 0 80px #17181d;
+	font-size: 12px;
+	box-shadow: 0 1px 1px rgb(45 44 44 / 90%);
+    
+}
+
+.training > .heading {
+	color: #fffef1;
+	font-family: Graphik, sans-serif;
+	letter-spacing: -0.03em;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.1;
+	margin-bottom: 8px;
+	margin-top: 0;
+}
+
+.training > .heading-sm {
+	font-size: 14px;
+	text-shadow: 0 0 80px #17181d;
+}
+
+.stats {
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+	gap: 30px;
+}
+
+.stat-icon {
+	padding: 8px;
+	background-color: #17181d;
+	border-radius: 0.8em;
+	margin-right: 10px;
+}
+
+
+
+.stats input[type="number"] { 
+    width: 20%;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    margin-top: -12px;
+    color: #c1c0b4;
+    background-color: transparent;
+}
+
+
+
+
+/* Styles pour la checkbox */
+.toggle-checkbox {
+    display: none; 
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 40px; 
+    height: 20px; 
+    background-color: #af4c4c; 
+    border-radius: 20px; 
+    cursor: pointer;
+    top:5px;
+}
+
+
+.toggle-label:after {
+    content: "";
+    position: absolute;
+    top: 2px; 
+    left: 2px; 
+    width: 16px; 
+    height: 16px; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    transition: transform 0.3s ease; 
+}
+
+/* Lorsque la checkbox est cochée */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #4caf50; 
+}
+
+/* Lorsque la checkbox est cochée, déplacer le cercle vers la droite */
+.toggle-checkbox:checked + .toggle-label:after {
+    transform: translateX(20px); 
+}
+
+/* Styles pour le bouton */
+.centered-button {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px; 
+    
+}
+
+.centered-button button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color:#2a3549; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    width: 40%;
+    margin-left:20px;
+}
+
+.centered-button button:hover {
+    background-color: #1e293a; /* Couleur de fond légèrement plus claire au survol */
+}
+
+.training-button {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    margin-top: 20px; 
+    
+}
+
+.training-button button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #fff; 
+    background-color:#363a42; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    width: 40%;
+}
+
+.training-button button:hover {
+    background-color: #292c32; /* Couleur de fond légèrement plus claire au survol */
+}
+
+#prompt {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #1a1a1a; /* Couleur de fond plus sombre */
+    color: #fff; /* Texte blanc */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: none; /* Empêcher le redimensionnement du textarea */
+}
+
+
+
+
+@keyframes bounce {
+    25% {
+      transform: translatey(5px);
+    }
+    75% {
+      transform: translatey(-5px);
+    }
+  }
+  
+
+
+
+@keyframes moving {
+    from {
+        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
+        -moz-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        -o-transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .stats {
+        flex-direction: column;
+    }
+}
+.top-bar {
+  background-color: #313238;
+  width: auto;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* HOME */
+.HOME_button {
+  position: fixed;
+  right : 1%;
+  top: 1%;;
+}
+
+.HOME_button button {
+  display:inline-block;
+  border:#666 1px solid;
+  margin:2px;
+  font-size:24px;
+  cursor:pointer;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background-color: white;
+  font-family: arial;
+}
+
+.HOME_button button:hover {
+  background-color:#ccc;
+  color:#000;
+}
+
+.HOME_button button img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+/* LEFT MENU */
+.left-menu {
+  height: 150%;
+  width: 200px;
+  background-color: #37383E;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-menu>* {
+  margin: 10px;
+}
+
+.left-menu>p {
+  margin: 10px;
+}
+
+.lm-title {
+  text-align: center;
+}
+
+.lm-search {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+
+.search-item button {
+  width: 200px; /* Définir une largeur fixe pour les boutons de recherche */
+}
+
+
+.search-not-selected {
+  background-color: #45474D;
+}
+
+.search-selected {
+  background-color: #3C4788;
+}
+
+.search-item {
+  display: flex;
+  align-items: center; 
+}
+
+.ellipsis {
+  font-size: 1.5em; 
+  margin-left: 15px; 
+  cursor: pointer;
+}
+
+/* Style du menu contextuel */
+.context-menu {
+  position: absolute;
+  background-color: #292a2c; /* Couleur de fond */
+  border: 1px solid #3d3b3b; /* Bordure */
+  border-radius: 4px; /* Coins arrondis */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+  padding: 5px; /* Espacement interne */
+  z-index: 1000; /* Z-index pour empêcher le chevauchement */
+  font-size: 14px; /* Taille de la police */
+  color: #ffffff; /* Couleur du texte */
+}
+
+/* Style des options du menu contextuel */
+.context-menu div {
+  cursor: pointer; /* Curseur au survol */
+  padding: 8px 12px; /* Espacement interne */
+  transition: background-color 0.3s ease; /* Transition en douceur pour le changement de couleur de fond */
+}
+
+/* Style au survol des options du menu contextuel */
+.context-menu div:hover {
+  background-color: #6a6767; /* Couleur de fond au survol */
+}

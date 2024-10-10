@@ -1,0 +1,123 @@
+
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style2.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
+<title>IA</title>
+<div class="HOME_button">
+  <button id="HOME_button"><img src="../img/accueil.png"></button>
+</div>
+<div class="top-bar">Social Network Data Scouting</div>
+<div class="container">
+    <div class="left-menu">
+      <p class="lm-title">Recherches</p>
+    </div>
+    <div class="center-box">
+      <ul class="tabs">
+        <li class="active" data-id="0">Environnement</li>
+        <li data-id="1">Sentiment</li>
+        <li data-id="2">Animal</li>
+        <li data-id="3">Analyser</li>
+      </ul>
+
+      <div class="contents">
+          <div class="box show" data-content="0">
+              <img src="../img/environment.jpg" alt="">
+              <div>
+                  <h3>Environnement</h3>
+                  <p>
+                      <div class="training">
+                          <h2 class="heading">Entrainement</h2>
+                          <span class="tagline">Entrainer l'IA avec des données paramétrables</span>
+                      
+                          <div class="stats">
+                              <div>
+                                  
+                                  Neurone : 257
+                              </div>
+                              <div>
+                                  
+                                  Couches: 5
+                              </div>
+                              <div>
+                                  
+                                  Epoques: <input type="number" id="epochs-count" name="epochs-count" min="1" value="200">
+                              </div>
+
+                          </div>
+                          <div class="training-button">
+                              <button id="train_model">Entrainer</button>
+                          </div>
+                      </div>
+                  </p>
+                  <div class="add">
+                      <span>Ajouter : </span>
+                      <input id="environnement" class="toggle-checkbox" type="checkbox">
+                      <label class="toggle-label" for="environnement"></label>
+                  </div> 
+              </div>
+          </div>
+
+          <div class="box hide" data-content="1">
+              <img src="../img/sentiment.jpg" alt="">
+              <div>
+                  <h3>Sentiment</h3>
+                  <p>
+                      L'IA peut-elle comprendre les sentiments humains ? </br>La réponse est certainnement oui.
+                      Grâce à l'analyse de texte, notre IA ajoutera dans votre fichier la polarité du post en général.
+                      Et comme tout bon outil, le degré de polarité et les mots reconnus y seront affichés. 
+                      <br>
+                      <br>
+                  </p>
+                  <div class="add">
+                      <span>Ajouter : </span>
+                      <input id="sentiment" class="toggle-checkbox" type="checkbox">
+                      <label class="toggle-label" for="sentiment"></label>
+                  </div> 
+              </div>
+          </div>
+
+          <div class="box hide" data-content="2">
+              <img src="../img/animal.jpg" alt="">
+              <div>
+                  <h3>Animal</h3>
+                  <p>
+                      <textarea id="prompt" rows="5" cols="50">For each sentence, specify whether it evokes a plant, a mushroom, or an animal.</textarea>
+                  </p>
+                  <div class="add">
+                      <span>Ajouter : </span>
+                      <input id="animal" class="toggle-checkbox" type="checkbox">
+                      <label class="toggle-label" for="animal"></label>
+                  </div>
+              </div>
+          </div>
+
+          <div class="box hide" data-content="3">
+              <img src="../img/analyse.jpg" alt="">
+              <div>
+                  <h3>Analyser</h3>
+                  <p>
+                    <label class="select">
+                        <select id="keyword">
+                            <option value="" selected disabled>Aucun mot clé choisi</option>
+                        </select>
+                    </label>
+                      <label class="select">
+                          <select id="file-selected">
+                              <option value="" selected disabled>Aucun fichier choisi</option>
+                          </select>
+                      </label>
+                  </p>
+                  <div class="centered-button">
+                      <button id="download_file">Download</button>
+                      <button id="start_cooking">Run</button>
+                  </div>
+                  
+                    
+              </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+<script src="main.js"></script>
+<script src="upload.js"></script>

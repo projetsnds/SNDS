@@ -1,0 +1,16 @@
+name: GitHub Test Push
+run-name: ${{ github.actor }} is testing to push 🚀
+on: [push]
+jobs:
+  Commence-A-tester:
+    runs-on: Server
+    steps:
+      - run: echo "Le workflow se lance parce que ${{ github.actor }} viens de ${{ github.event_name }}"
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "On est sur la branche ${{ github.ref }} sur le github ${{ github.repository }} ."
+      - name: List les fichiers modifies
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "On test..."
+      - run: python test.py
+      - run: echo "Le status est ${{ job.status }}."

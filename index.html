@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>SNDS</title>
+</head>
+
+<body>
+    <div class="IA_button">
+        <button id="IA_button"><img src="img/intelligence-artificielle.png"></button>
+    </div>
+    <div class="config_button">
+        <button id="config_button"><img src="img/config.png"></button>
+    </div>
+    <div class="top-bar">Social Network Data Scouting</div>
+    <div class="overloading">
+        <div class="loading-wrapper">
+            <div class="txt-loading">Recherche...</div>
+            <div class="nb-posts">0 / -</div>
+        </div>
+        <button class="buttonStop">Arrêter la recherche</button>
+    </div>
+    <div class="main-container">
+        <div class="left-menu">
+            <p class="lm-title">Recherches</p>
+        </div>
+        <div class="search-container">
+            <div class="sn-container">
+                <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/loupe.svg">
+                        <p>Recherche de posts</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <!-- <div class="sn-content-element">
+                        <span>
+                            <img class="sn-logo" src="img/logoX.PNG">
+                            <p>X</p>
+                            <input type="checkbox" id="x-cb">
+                        </span>
+                    </div> -->
+                    <div class="sn-content-element">
+                        <span>
+                            <img class="sn-logo" src="img/logoYT.png">
+                            <p>Youtube</p>
+                            <input type="checkbox" id="yt-cb">
+                        </span>
+                    </div>
+                    <div class="sn-content-element">
+                        <span>
+                            <img class="sn-logo" src="img/logoREDDIT.webp">
+                            <p>Reddit</p>
+                            <input type="checkbox" id="reddit-cb">
+                        </span>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <span>
+                            <img class="sn-logo" src="img/logoInstagram.webp">
+                            <p>Instagram</p>
+                            <input type="checkbox" id="ig-cb">
+                        </span>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <span>
+                            <img class="sn-logo" src="img/flickr.png">
+                            <p>Flickr</p>
+                            <input type="checkbox" id="fkr-cb">
+                        </span>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <p id="error-message" class="error-message"></p>
+                    </div>
+                    <div class="sn-content-element">
+                        <button id="start-button">
+                            Lancer la recherche
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="sn-container">
+                 <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/logoX.PNG">
+                        <p>X</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <div class="sn-content-element">
+                        <p>Recherche</p>
+                        <input type="text" id="x-search">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Langue</p>
+                        <div id="x-country" class="select-country">Choisir...</div>
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de début</p>
+                        <input type="date" id="x-start-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de fin</p>
+                        <input type="date" id="x-end-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Nombre de posts</p>
+                        <input type="number" id="x-nb">
+                    </div>
+                    <div class="sn-content-element">
+                        <p class="duree_span">Durée estimée</p>
+                        <p id="x-duree" class="duree"></p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="sn-container">
+                <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/logoYT.png">
+                        <p>Youtube</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <div class="sn-content-element">
+                        <p>Recherche</p>
+                        <input type="text" id="yt-search" class="search_social">
+                        <div class="invalid_champ">Uniquement lettres et chiffres</div>          
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Langue</p>
+                        <div id="yt-country" class="select-country">Choisir...</div>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <p>Date de début</p>
+                        <input type="date" id="yt-start-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de fin</p>
+                        <input type="date" id="yt-end-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Nombre de posts</p>
+                        <input type="number" id="yt-nb">
+                    </div>
+
+                    <div class="sn-content-element">
+                        <p>Tous</p>
+                        <button id="yt-toggleButton">all</button>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <p class="duree_span">Durée estimée</p>
+                        <p id="yt-duree" class="duree"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="sn-container">
+                <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/logoREDDIT.webp">
+                        <p>Reddit</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <div class="sn-content-element">
+                        <p>Langue</p>
+                        <div id="reddit-country" class="select-country">Choisir...</div>
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Communauté</p>
+                        <div id="reddit-community" class="select-country">Choisir...</div>
+                        <div id="reddit-add" title="Ajouter une communauté">+</div>
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de début</p>
+                        <input type="date" id="reddit-start-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de fin</p>
+                        <input type="date" id="reddit-end-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Nombre de posts</p>
+                        <input type="number" id="reddit-nb">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Classer par</p>
+                        <input type="radio" id="reddit-populaires" name="reddit-sort" value="populaires" checked>
+                        <label for="reddit-populaires">populaires</label>
+
+                        <input type="radio" id="reddit-recents" name="reddit-sort" value="recents">
+                        <label for="reddit-recents">récents</label>
+                    </div>
+                    <div class="sn-content-element">
+                        <p class="duree_span">Durée estimée</p>
+                        <p id="reddit-duree" class="duree"></p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="sn-container">
+                <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/logoInstagram.webp">
+                        <p>Instagram</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <div class="sn-content-element">
+                        <p>Recherche</p>
+                        <input type="text" id="ig-search" class="search_social">
+                        <div class="invalid_champ">Uniquement lettres et chiffres</div> 
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Langue</p>
+                        <div id="ig-country" class="select-country">Choisir...</div>
+                    </div>
+
+                    <div class="sn-content-element">
+                        <p>Date de fin</p>
+                        <input type="date" id="ig-end-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Nombre de posts</p>
+                        <input type="number" id="ig-nb">
+                    </div>
+                    <div class="sn-content-element">
+                        <p class="duree_span">Durée estimée</p>
+                        <p id="ig-duree" class="duree"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sn-container">
+                <div class="sn-top-bar">
+                    <span>
+                        <img class="sn-logo" src="img/flickr.png">
+                        <p>Flickr</p>
+                    </span>
+                </div>
+                <div class="sn-content">
+                    <div class="sn-content-element">
+                        <p>Recherche</p>
+                        <input type="text" id="fkr-search" class="search_social">
+                        <div class="invalid_champ">Uniquement lettres et chiffres</div> 
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Langue</p>
+                        <div id="fkr-country" class="select-country">Choisir...</div>
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de début</p>
+                        <input type="date" id="fkr-start-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Date de fin</p>
+                        <input type="date" id="fkr-end-date">
+                    </div>
+                    <div class="sn-content-element">
+                        <p>Nombre de posts</p>
+                        <input type="number" id="fkr-nb">
+                    </div>
+                    <div class="sn-content-element">
+                        <p class="duree_span">Durée estimée</p>
+                        <p id="fkr-duree" class="duree"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Popup d'erreur -->
+        <div id="popup" class="alert alert-dark">
+            <div class="icon__wrapper">
+                <span class="mdi mdi-alert-outline"></span>
+            </div>
+            <p id="popup-message"></p>
+            <span class="mdi mdi-open-in-new open"></span>
+            <span class="mdi mdi-close close"></span>
+        </div>
+        
+    </div>
+</body>
+<script src="scripts/btn-all.js"></script>
+<script src="scripts/duree.js"></script>
+<script src="scripts/lang.js"></script>
+<script src="scripts/main.js"></script>
+
+
+</html>
